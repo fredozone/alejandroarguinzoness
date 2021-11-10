@@ -1,0 +1,952 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
+@font-face {
+  font-family: Austra-Lite;
+  src: url(../fonts/Austra-Lite.woff);
+}
+@font-face {
+  font-family: Aloja-Light;
+  src: url(../fonts/ExplorerFree-Regular.otf);
+}
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: black;
+  /* background-color: rgb(241, 240, 240); */
+}
+/* vavigation style*/
+
+.active {
+  color: red;
+}
+
+.navbarnew {
+  background-color: #000 !important;
+  box-shadow: 2px 2px 10px #666;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f3d250;
+}
+
+hr.logoLGVhidden {
+  margin-bottom: 0;
+  background-color: #f3d250;
+}
+
+nav li {
+  width: 90px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h3 {
+  font-family: Austra-Lite;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 4.25rem;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/*Name Alejandro Arguinzones*/
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#borderimage {
+  width: 60%;
+  height: 96%;
+  border-style: solid;
+  border-color: #f3d250;
+  border-radius: 10px;
+  border-width: 6px;
+}
+
+.hidden {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.ocultartodo {
+  visibility: hidden;
+  display: none;
+}
+
+.vista {
+  display: block !important;
+}
+
+.hide-img {
+  -webkit-transition: all 4s ease-in-out; /* Safari y Chrome */
+  -moz-transition: all 4s ease-in-out; /* Firefox */
+  -o-transition: all 4s ease-in-out; /* IE 9 */
+  -ms-transition: all 4s ease-in-out; /* Opera */
+  visibility: hidden;
+}
+
+.show-img {
+  -webkit-transition: all 4s ease-in-out; /* Safari y Chrome */
+  -moz-transition: all 4s ease-in-out; /* Firefox */
+  -o-transition: all 4s ease-in-out; /* IE 9 */
+  -ms-transition: all 4s ease-in-out; /* Opera */
+  visibility: visible;
+}
+
+/* School Ul li*/
+ul.ulstyle > li::before {
+  content: "•"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: #fdcd3b; /* Or a color you prefer */
+  margin-left: -24px;
+}
+
+.container-fluid .row:nth-child(even) {
+  background: #f1f4f5;
+}
+
+.showipad {
+  visibility: hidden;
+  display: none;
+}
+
+.ipad {
+  visibility: visible;
+}
+
+/*==================================
+    TIMELINE
+==================================*/
+/*-- GENERAL STYLES
+------------------------------*/
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline h4,
+.timeline h5,
+.timeline h6 {
+  line-height: inherit;
+}
+
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+  padding-left: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+.timeline-marker:before {
+  background: #fdcd3b;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.timeline-marker:after {
+  content: "";
+  width: 3px;
+  background: #ccd5db;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+.timeline-item:last-child .timeline-marker:after {
+  content: none;
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+  background: transparent;
+  border: 3px solid#fdcd3b;
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE CENTERED
+----------------------------------------------*/
+@media (min-width: 992px) {
+  .timeline-centered,
+  .timeline-centered .timeline-item,
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-marker,
+  .timeline-centered .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline-centered .timeline-item {
+    padding-bottom: 69px;
+    overflow: hidden;
+  }
+  .timeline-centered .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-content {
+    width: 50%;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item.period .timeline-content {
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .timeline-centered .timeline-item.period {
+    padding: 71px 0 41px;
+  }
+  .timeline-centered .period .timeline-marker:after {
+    height: 30px;
+    bottom: 0;
+    top: auto;
+  }
+  .timeline-centered .period .timeline-title {
+    left: auto;
+  }
+}
+
+/*----------------------------------------------
+    MOD: MARKER OUTLINE
+----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+  background: transparent;
+  border-color: #ff6b6b;
+}
+.marker-outline .timeline-item:hover .timeline-marker:before {
+  background: #ff6b6b;
+}
+
+/*CONTACT ERROR*/
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 5px;
+}
+
+label.required::after {
+  color: red;
+  content: "*";
+  font-weight: normal;
+}
+
+label.required:hover::after {
+  color: red;
+  content: " field required";
+  font-weight: normal;
+}
+
+.error {
+  border-radius: 5px 5px 0 0;
+  box-sizing: border-box;
+  color: #f00;
+  display: block;
+  font-size: 80%;
+  font-weight: bold;
+  padding: 3px;
+  width: 100%;
+}
+
+button#styleB {
+  width: 25%;
+  display: block;
+  background-color: #fdcd3b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  color: black;
+  margin-bottom: 20px;
+  border-color: black;
+}
+
+#styleB:hover {
+  background-color: black;
+  border-color: black;
+  color: #fdcd3b;
+}
+
+.contact-style > p:first-child {
+  font-family: Aloja-Light;
+  font-size: 2rem;
+  color: black;
+  font-weight: normal;
+}
+
+.contact-style > p:last-child {
+  font-family: Aloja-Light;
+  font-size: 1rem;
+  color: black;
+  font-weight: normal;
+}
+
+.contactme {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: normal;
+}
+
+.fa-envelope-open-text,
+.fa-mobile-alt {
+  color: black;
+}
+
+.fa-envelope-open-text:hover,
+.fa-mobile-alt:hover {
+  color: #fdcd3b;
+}
+
+form#contact-form input,
+form#contact-form textarea {
+  width: 90%;
+  padding: 8px 0px 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: transparent;
+  -webkit-transition: 0.5s;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: none;
+  border-bottom: 2px solid white !important;
+}
+
+.alert-success {
+  width: 94%;
+}
+
+/*WORK*/
+
+#portfolioStyle {
+  margin-top: -32px;
+  line-height: 34px;
+  font-size: 1.5rem;
+  margin-bottom: 37px;
+  font-family: Austra-Lite;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.workSandy {
+  width: 50%;
+  height: 127px;
+  margin-top: 20px;
+}
+
+/* ZOOM IMAGES*/
+.imgcenter {
+  /*image's size*/
+  width: 100%;
+  overflow: hidden;
+}
+
+.imgcenter img {
+  -webkit-transition: all 3s ease-in-out; /* Safari y Chrome */
+  -moz-transition: all 3s ease-in-out; /* Firefox */
+  -o-transition: all 3s ease-in-out; /* IE 9 */
+  -ms-transition: all 3s ease-in-out; /* Opera */
+  width: 100%;
+}
+.imgcenter:hover img {
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: black;
+  color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* JAVASCRIPT ERROR PAGE */
+
+.errorBody {
+  background-color: white;
+}
+
+.errorDiv {
+  background-color: black;
+  height: 110px;
+  position: relative;
+}
+
+.errorImagen {
+  width: 100px;
+  margin-top: 6px;
+  margin-left: 5px;
+}
+
+.errorJS {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Austra-Lite;
+  color: #f3d250;
+  position: absolute;
+  margin-left: 110px;
+  top: 1%;
+}
+
+/*big screem*/
+@media (min-width: 1537px) {
+  .logoLGVhidden {
+    display: none;
+  }
+
+  .positionli {
+    /*right: 41px;*/
+    position: relative;
+  }
+
+  .stylehrleft {
+    border: 5px solid black;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 141px;
+    display: inline;
+  }
+
+  .stylehrright {
+    border: 5px solid black;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    width: 141px;
+    display: inline;
+  }
+
+  .positionimage {
+    width: 90px;
+    position: fixed;
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  .moonlogo {
+    position: fixed;
+    opacity: 1;
+    right: 49%;
+    top: 43px;
+    width: 113px;
+    height: 58px;
+    background: black;
+    -moz-border-radius: 0px 0px 56px 56px;
+    -webkit-border-radius: 0px 0px 56px 56px;
+    border-radius: 0px 0px 56px 56px;
+    left: 50%;
+    margin-left: -61px;
+  }
+
+  .name {
+    font-size: 6.25rem;
+    font-weight: bold;
+    font-family: Austra-Lite;
+    color: #f3d250;
+    text-shadow: 2px 2px black;
+  }
+
+  .background-one {
+    background: #eff0f3;
+  }
+
+  .background-two {
+    background-attachment: #fffffe;
+  }
+
+  .title-style {
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+
+  h3 {
+    font-family: Austra-Lite;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    font-size: 4.25rem;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .style-about {
+    line-height: 34px;
+    font-size: 1rem;
+  }
+
+  .container-fluid .row {
+    padding: 45px 0 4em 0;
+  }
+
+  .second-title {
+    margin-top: 29px;
+    margin-bottom: 15px;
+    font-family: Aloja-Light;
+  }
+
+  ul.ulstyle > li::before {
+    line-height: 34px;
+  }
+
+  /*CONTACT*/
+
+  #message {
+    height: 115px;
+  }
+
+  form {
+    margin-top: 34px;
+  }
+
+  .contact-style {
+    margin-top: 25px;
+  }
+
+  .spanicon {
+    margin-top: 40px;
+  }
+
+  .timeline {
+    line-height: 1.4em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  ul.ulstyle > li {
+    list-style-type: none;
+    align-items: left;
+    position: left;
+    position: relative;
+    text-align: left;
+    margin-left: 113px;
+  }
+}
+
+/*laptop*/
+@media (min-width: 1040px) and (max-width: 1536px) {
+  .logoLGVhidden {
+    display: none;
+  }
+
+  .positionli {
+    /*right: 41px;*/
+    position: relative;
+  }
+
+  .stylehrleft {
+    border: 5px solid black;
+    position: absolute;
+    top: 32%;
+    left: 25%;
+    width: 141px;
+    display: inline;
+    background-color: black;
+  }
+
+  .stylehrright {
+    border: 5px solid black;
+    position: absolute;
+    top: 32%;
+    right: 25%;
+    width: 141px;
+    display: inline;
+    background-color: black;
+  }
+
+  .positionimage {
+    width: 90px;
+    position: fixed;
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  .moonlogo {
+    position: fixed;
+    opacity: 1;
+    right: 49%;
+    top: 43px;
+    width: 113px;
+    height: 58px;
+    background: black;
+    -moz-border-radius: 0px 0px 56px 56px;
+    -webkit-border-radius: 0px 0px 56px 56px;
+    border-radius: 0px 0px 56px 56px;
+    left: 50%;
+    margin-left: -61px;
+  }
+
+  .name {
+    font-size: 6.25rem;
+    font-weight: bold;
+    font-family: Austra-Lite;
+    color: #f3d250;
+    text-shadow: 2px 2px black;
+  }
+
+  .background-one {
+    background: #eff0f3;
+  }
+
+  .background-two {
+    background-attachment: #fffffe;
+  }
+
+  .title-style {
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+
+  h3 {
+    font-family: Austra-Lite;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    font-size: 4.25rem;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .second-title {
+    margin-top: 29px;
+    margin-bottom: 15px;
+    font-family: Aloja-Light;
+  }
+
+  .container-fluid .row {
+    padding: 45px 0 4em 0;
+  }
+
+  .style-about {
+    /*margin-top: 25px;*/
+    line-height: 34px;
+    font-size: 1rem;
+  }
+
+  #message {
+    height: 108px;
+  }
+
+  ul.ulstyle > li {
+    list-style-type: none;
+    align-items: left;
+    position: left;
+    position: relative;
+    text-align: left;
+    margin-left: 113px;
+  }
+
+  ul.ulstyle > li::before {
+    line-height: 34px;
+  }
+
+  .contact-style {
+    margin-top: 30px;
+  }
+}
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1040px) {
+  .logohidden {
+    display: none;
+  }
+
+  .positionimage {
+    width: 90px;
+  }
+
+  #borderimage {
+    margin-top: 10%;
+    width: 80%;
+    height: 75%;
+  }
+
+  .title-style {
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+
+  .name {
+    font-size: 4.25rem;
+    font-weight: bold;
+    font-family: Austra-Lite;
+    color: #f3d250;
+    text-shadow: 2px 2px black;
+  }
+
+  .background-one {
+    background: #eff0f3;
+  }
+
+  .background-two {
+    background-attachment: #fffffe;
+  }
+
+  .style-about {
+    line-height: 34px;
+  }
+
+  .showipad {
+    visibility: visible;
+    display: block;
+  }
+
+  .ipad {
+    visibility: hidden;
+    display: none;
+  }
+
+  .stylehrleft {
+    border: 5px solid black;
+    position: absolute;
+    top: 22%;
+    left: 20%;
+    width: 12%;
+    display: inline;
+    background-color: black;
+  }
+
+  .stylehrright {
+    border: 5px solid black;
+    position: absolute;
+    top: 22%;
+    right: 20%;
+    width: 12%;
+    display: inline;
+    background-color: black;
+  }
+
+  #message {
+    height: 188px;
+  }
+
+  .container-fluid .row {
+    padding-bottom: 25px;
+  }
+
+  .second-title {
+    margin-bottom: 15px;
+    font-family: Aloja-Light;
+  }
+
+  .ocultartodo {
+    visibility: visible;
+    display: block;
+  }
+
+  ul.ulstyle > li {
+    list-style-type: none;
+    align-items: left;
+    position: left;
+    position: relative;
+    text-align: left;
+    margin-left: 90px;
+  }
+
+  ul.ulstyle > li {
+    list-style-type: none;
+  }
+
+  #portfolioStyle {
+    font-size: 1rem;
+  }
+
+  .contact-style > p:first-child {
+    font-size: 1.5rem;
+  }
+
+  .workSandy {
+    width: 80%;
+    height: 50%;
+  }
+}
+
+/*Smartphone*/
+@media (min-width: 320px) and (max-width: 767px) {
+  .logohidden {
+    display: none;
+  }
+
+  .positionimage {
+    width: 90px;
+  }
+
+  .name {
+    font-size: 3.25rem;
+    font-weight: bold;
+    font-family: Austra-Lite;
+    color: #f3d250;
+    text-shadow: 2px 2px black;
+  }
+
+  .title-style {
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 3px 3px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+
+  .background-one {
+    background: #eff0f3;
+  }
+
+  .background-two {
+    background-attachment: #fffffe;
+  }
+
+  .stylehrleft {
+    border: 5px solid black;
+    position: absolute;
+    top: 22%;
+    left: 8%;
+    width: 12%;
+    display: inline;
+    background-color: black;
+  }
+
+  .stylehrright {
+    border: 5px solid black;
+    position: absolute;
+    top: 22%;
+    right: 8%;
+    width: 12%;
+    display: inline;
+    background-color: black;
+  }
+
+  .style-about {
+    line-height: 34px;
+  }
+
+  #message {
+    height: 188px;
+  }
+
+  .second-title {
+    margin-bottom: 15px;
+    font-family: Aloja-Light;
+  }
+
+  ul.ulstyle > li {
+    list-style-type: none;
+    align-items: left;
+    position: left;
+    position: relative;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+  ul.ulstyle > li {
+    list-style-type: none;
+  }
+
+  #portfolioStyle {
+    font-size: 1rem;
+  }
+
+  .spanicon {
+    margin-bottom: 30px;
+  }
+
+  .contact-style > p:first-child {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+}
